@@ -14,9 +14,12 @@ public class Mola
     /**
      * Konštruktory objektov triedy Mola.
      */
-    public Mola()
+    public Mola(int poziciaMoleX, int poziciaMoleY)
     {
-        // Inicializujte inštančné premenné.
+        this.poziciaMoleX = poziciaMoleX;
+        this.poziciaMoleY = poziciaMoleY;
+        this.mola = new Trojuholnik(this.poziciaMoleX, this.poziciaMoleY);
+        this.mola.zobraz();
         
     }
 }
