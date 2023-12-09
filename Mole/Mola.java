@@ -7,11 +7,9 @@
  */
 public class Mola
 {
-    // Nahraďte nižšie uvedený príklad vlastnými premennými…
-
-    // inštančné premenné…
-    private int x;
-
+    private Trojuholnik mola;
+    private int poziciaMoleX;
+    private int poziciaMoleY;
 
     /**
      * Konštruktory objektov triedy Mola.
@@ -19,19 +17,6 @@ public class Mola
     public Mola()
     {
         // Inicializujte inštančné premenné.
-        x = 0;
-    }
-
-
-    /**
-     * Prázdna metóda – «tento komentár nahraďte vlastným opisom»…
-     *
-     * @param   y  opis významu parametra
-     * @return     opis významu návratovej hodnoty – napr.: súčet x a y
-     */
-    public int príkladMetódy(int y)
-    {
-        // Sem vložte príkazy tela metódy.
-        return x + y;
+        
     }
 }
