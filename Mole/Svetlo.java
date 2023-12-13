@@ -1,37 +1,41 @@
 
 /**
- * Trieda {@code Svetlo} slúži na «doplňte opis»…
+ * Trieda ktora reprezentuje svetlo.
  *
- * @author   «meno autora»
- * @version  «verzia alebo dátum»
+ * @author   Jakub Gubany
+ * @version  10.12.2023
  */
-public class Svetlo
-{
-    // Nahraďte nižšie uvedený príklad vlastnými premennými…
-
-    // inštančné premenné…
-    private int x;
-
+public class Svetlo {
+    private int poziciaX;
+    private int poziciaY;
+    private Obrazok vizual;
 
     /**
-     * Konštruktory objektov triedy Svetlo.
+     * Konštruktor vytvrorí svtlo na platno.
+     * @param poziciaX: int je x-ova suradnica svetla na ploche.
+     * @param poziciaY: int je y-ova suradnica svetla na ploche.
      */
-    public Svetlo()
-    {
-        // Inicializujte inštančné premenné.
-        x = 0;
+    public Svetlo(int poziciaX, int poziciaY) {
+        this.poziciaX = poziciaX;
+        this.poziciaY = poziciaY;
+        this.vizual = new Obrazok("pics\\svetlo.png");
+        this.vizual.zmenPolohu(this.poziciaX, this.poziciaY);
+        this.vizual.zobraz();
     }
-
-
     /**
-     * Prázdna metóda – «tento komentár nahraďte vlastným opisom»…
+     * Get metoda na ziskanie aktualnej pozicie X svetla na platne.
      *
-     * @param   y  opis významu parametra
-     * @return     opis významu návratovej hodnoty – napr.: súčet x a y
+     * @return  vrati celociselnu hodnotu pozicie x na platne.
      */
-    public int príkladMetódy(int y)
-    {
-        // Sem vložte príkazy tela metódy.
-        return x + y;
+    public int getPoziciaX() {
+        return this.poziciaX;
+    }
+    /**
+     * Get metoda na ziskanie aktualnej pozicie Y svetla na platne.
+     * 
+     * @return vrati celociselnu hodnotu pozicie Y na platne.
+     */
+    public int getPoziciaY() {
+        return this.poziciaY;
     }
 }
