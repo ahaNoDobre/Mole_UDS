@@ -1,15 +1,37 @@
-
+import java.util.ArrayList;
+import java.util.Random;
 /**
- * Write a description of class GeneratorSvetiel here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Trieda {@code GeneratorSvetiel} slúži na «doplňte opis»…
+ *
+ * @author   «Jakub Gubany»
+ * @version  «17.12.2023»
  */
-public class GeneratorSvetiel {
+public class GeneratorSvetiel
+{
+    private ArrayList<Svetlo> svetla;
+    private Random generator;
+  
     /**
-     * Constructor for objects of class GeneratorSvetiel
+     * Vytvori inštanciu triedy Generator Svetiel
+     * 
+     * @param pocet: int , pocet potrebnych svetiel na vygenerovanie.
      */
-    public GeneratorSvetiel() {
-        // initialise instance variables
+    public GeneratorSvetiel(int pocet)
+    {
+        this.svetla = new ArrayList<Svetlo>(pocet);
+        this.generator = new Random();
+    }
+    /**
+     * Vytvori ArrayList inštancii triedy Svetlo.
+     * 
+     * @param pocet: int , pocet potrebnych svetiel na vygenerovanie.
+     */
+    public ArrayList<Svetlo> zoznamSvetiel(int pocet) {
+        for (int i = 0; i < pocet; i++) {
+            int poziciaMoleX = this.generator.nextInt(50,450);
+            int poziciaMoleY = this.generator.nextInt(50,450);
+            this.svetla.add(new Svetlo(poziciaMoleX, poziciaMoleY));
+        }
+        return this.svetla;
     }
 }
