@@ -18,7 +18,7 @@ public class Svetlo {
     public Svetlo(int poziciaX, int poziciaY) {
         this.poziciaX = poziciaX;
         this.poziciaY = poziciaY;
-        this.vizual = new Obrazok("pics\\svetlo.png");
+        this.vizual = new Obrazok("svetlo.png");
         this.vizual.zmenPolohu(this.poziciaX, this.poziciaY);
         this.vizual.zobraz();
     }
